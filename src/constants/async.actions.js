@@ -5,7 +5,7 @@ import {
   fetchUserFailed
 } from './actions';
 
-const URL = 'http://rest.learncode.academy/api/manoj/users';
+const URL = 'http://rest.learncode.academy/api/ttn/users';
 
 export const fetchUsers = () => {
   return (dispatch) => {

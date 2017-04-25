@@ -7,7 +7,7 @@ import {
 const initialState = {
   loading: false,
   error: null,
-  users: []
+  list: []
 };
 
 const userReducer = (state = initialState, action) => {
@@ -19,14 +19,16 @@ const userReducer = (state = initialState, action) => {
       }
     }
     case FETCH_USERS_SUCCESS: {
-      const users = state.users.concat(action.users);
+      const list = state.list.concat(action.users);
       return {
+        ...state,
         loading: false,
-        users
+        list
       }
     }
     case FETCH_USERS_FAILED: {
       return {
+        ...state,
         loading: false,
         error: action.err
       }

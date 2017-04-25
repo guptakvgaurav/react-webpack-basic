@@ -1,12 +1,12 @@
-// http://rest.learncode.academy/
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './src/App';
 import store from './src/store/create.store';
 
-import {
-  fetchUsers,
-} from './src/constants/async.actions';
-
-store.subscribe(() => {
-  console.log(store.getState());
-});
-
-store.dispatch(fetchUsers());
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>, 
+  document.getElementById('app')
+);
