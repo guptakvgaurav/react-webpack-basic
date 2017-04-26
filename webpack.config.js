@@ -1,4 +1,5 @@
 const path = require('path');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -16,7 +17,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html'      
-    })
+    }),
+    new LiveReloadPlugin()
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
