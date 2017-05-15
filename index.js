@@ -4,7 +4,7 @@ console.log("This is React");
 
 import {createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import fetch
+
 
 let reducer = (state, action) => {
     let updatedState = state;
